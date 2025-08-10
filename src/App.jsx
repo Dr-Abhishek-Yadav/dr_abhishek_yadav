@@ -101,6 +101,26 @@ export default function DoctorPortfolio() {
           <li>Sigmoidoscopy</li>
           <li>Enteroscopy</li>
           <li>ERCP (Endoscopic Retrograde Cholangio-Pancreatography)</li>
+          <li>Gastroenterology / GI</li>
+          <li>Inflammatory Bowel Disease (IBD) – Crohn's Disease & Ulcerative Colitis</li>
+          <li>Luminal Disorders</li>
+          <li>Endoscopic Management of GI Strictures</li>
+          <li>Colon & Rectal Cancer – Familial Polyposis</li>
+          <li>Preventative health related to the gastrointestinal (GI) tract</li>
+          <li>Diagnosis and treatment of digestive system conditions</li>
+          <li>Gastrointestinal Endoscopic Mucosal Resection</li>
+          <li>Liver Disease Treatment</li>
+          <li>Hepatitis A, B, C, D, and E Treatment</li>
+          <li>Hemorrhoids Treatment</li>
+          <li>Gall Bladder (Biliary) Stone Treatment</li>
+          <li>Colitis Treatment</li>
+          <li>Ulcerative Colitis Treatment</li>
+          <li>Constipation Treatment</li>
+          <li>Acidity Treatment</li>
+          <li>Acute Pancreatitis Treatment</li>
+          <li>Abdominal Pain Treatment</li>
+          <li>Wilson's Disease Treatment</li>
+          <li>Peptic / Gastric Ulcer Treatment</li>
         </ul>
       </section>
 
@@ -108,8 +128,9 @@ export default function DoctorPortfolio() {
       <section id="experience" className="p-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">Experience</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
-          <li>Senior Resident, Gastroenterology, PGIMER, Chandigarh</li>
-          <li>Senior Resident, Internal Medicine, JLN Medical College, Ajmer, Rajasthan</li>
+          <li>Department of Gastroenterology, PGIMER, Chandigarh</li>
+          <li>Department of Internal Medicine, SMS Medical College, Jaipur, Rajasthan</li>
+          <li>Department of Internal Medicine, JLN Medical College, Ajmer, Rajasthan</li>
         </ul>
       </section>
 
