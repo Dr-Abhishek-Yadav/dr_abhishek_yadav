@@ -69,7 +69,7 @@ export default function DoctorPortfolio() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
           <img
-            src={`${import.meta.env.BASE_URL}Abhishek.jpg`}
+            src={`${import.meta.env.BASE_URL}dr-abhishek-yadav-gastroenterologist-ajmer.jpg`}
             alt="Dr. Abhishek Yadav"
             className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-4"
           />
