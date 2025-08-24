@@ -46,7 +46,7 @@ export default function DoctorPortfolio() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <header className="bg-blue-800 text-white px-6 py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-blue-900/90 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold">Dr. Abhishek Yadav</h1>
           <ul className="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-md font-medium">
@@ -54,41 +54,45 @@ export default function DoctorPortfolio() {
             <li><a href="#services" className="hover:text-blue-200">Services</a></li>
             <li><a href="#experience" className="hover:text-blue-200">Experience</a></li>
             <li><a href="#education" className="hover:text-blue-200">Education</a></li>
+            <li><a href="#opd" className="hover:text-blue-200">OPD</a></li>
             <li><a href="#contact" className="hover:text-blue-200">Contact</a></li>
           </ul>
         </nav>
       </header>
 
       {/* Hero */}
-<section
-  className="relative text-white py-16 sm:py-24 px-4 overflow-hidden"
-  style={{
-    backgroundImage: `url('${import.meta.env.BASE_URL}gastro-bg.png')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div> {/* Overlay for readability */}
+      <section
+        className="relative text-white py-16 sm:py-24 px-4 overflow-hidden"
+        style={{
+          backgroundImage: `url('${import.meta.env.BASE_URL}gastro-bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div> {/* Overlay */}
 
-  <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-    <img
-      src={`${import.meta.env.BASE_URL}dr-abhishek-yadav-gastroenterologist-ajmer.jpg`}
-      alt="Dr. Abhishek Yadav"
-      className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-4"
-    />
-    <h2 className="text-2xl sm:text-4xl font-bold text-white">Dr. Abhishek Yadav</h2>
-    <p className="text-sm sm:text-lg text-gray-200 mt-1">MBBS, MD, DM – Gastroenterology</p>
-    <p className="text-sm sm:text-base text-gray-100 mt-1">Gastrointestinal and Liver Specialist</p>
-    <p className="text-sm sm:text-base text-gray-100">Diagnostic and Therapeutic Endoscopist</p>
-  </div>
-</section>
+        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}dr-abhishek-yadav-gastroenterologist-ajmer.jpg`}
+            alt="Dr. Abhishek Yadav"
+            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-4"
+          />
+          <h2 className="text-2xl sm:text-4xl font-bold text-white">Dr. Abhishek Yadav</h2>
+          <p className="text-sm sm:text-lg text-gray-200 mt-1">MBBS, MD, DM – Gastroenterology</p>
+          <p className="text-sm sm:text-base text-gray-100 mt-1">Gastrointestinal and Liver Specialist</p>
+          <p className="text-sm sm:text-base text-gray-100">Diagnostic and Therapeutic Endoscopist</p>
+        </div>
+      </section>
 
       {/* About */}
       <section id="about" className="p-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-gray-700 leading-relaxed">
-          Dr. Abhishek Yadav is a specialist in Medical Gastroenterology, Diagnostic and Therapeutic Endoscopy. He completed MBBS and MD in Internal Medicine from SMS Medical College, Jaipur, Rajasthan, and pursued DM in Gastroenterology from PGIMER, Chandigarh.
-          He is a member of the American Gastroenterological Association (AGA), and a life member of the Indian Society of Gastroenterology (ISG), Indian National Association for Study of Liver (INASL), and Society for Gastrointestinal Endoscopy in India (SGEI).
+          Dr. Abhishek Yadav is a specialist in Medical Gastroenterology, Diagnostic and Therapeutic Endoscopy. 
+          He completed MBBS and MD in Internal Medicine from SMS Medical College, Jaipur, Rajasthan, 
+          and pursued DM in Gastroenterology from PGIMER, Chandigarh.
+          He is a member of the American Gastroenterological Association (AGA), and a life member of the Indian Society of Gastroenterology (ISG), 
+          Indian National Association for Study of Liver (INASL), and Society for Gastrointestinal Endoscopy in India (SGEI).
         </p>
       </section>
 
@@ -158,6 +162,16 @@ export default function DoctorPortfolio() {
         </ul>
       </section>
 
+      {/* OPD Timings */}
+      <section id="opd" className="bg-blue-50 p-6 max-w-4xl mx-auto rounded-lg shadow-md mt-6">
+        <h2 className="text-3xl font-semibold mb-4 text-blue-900">OPD Timings</h2>
+        <p className="text-gray-800 font-medium">Dr. Abhishek Yadav – Ajmer Gastro & Liver Care</p>
+        <p className="text-gray-700 mt-2">⏰ OPD Hours: <span className="font-semibold">6:00 PM – 8:00 PM (Mon–Sun)</span></p>
+        <p className="text-gray-700 mt-2">📞 Book Appointment at Call / WhatsApp: <span className="font-semibold">+91-8279263547</span></p>
+        <p className="text-gray-700 mt-2">🚑 For urgent or emergency services, please contact:</p>
+        <p className="text-gray-900 font-semibold">Kshetrapal Hospital Multispeciality & Research Centre (24×7)</p>
+      </section>
+      
       {/* Contact */}
       <section id="contact" className="p-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
@@ -218,7 +232,7 @@ export default function DoctorPortfolio() {
 
         <div className="mt-6 space-y-2 text-gray-800">
           <p className="flex items-center"><Mail className="w-5 h-5 mr-2" /> drabhishekyadavgastro@gmail.com</p>
-          <p className="flex items-center"><Phone className="w-5 h-5 mr-2" /> +91-7014730846</p>
+          <p className="flex items-center"><Phone className="w-5 h-5 mr-2" /> +91-8279263547</p>
           <p className="flex items-center"><Linkedin className="w-5 h-5 mr-2" /> <a href="https://www.linkedin.com/in/abhishek-yadav-9a6a1273/" target="_blank" className="text-blue-700 underline">LinkedIn</a></p>
           <p className="flex items-center"><MapPin className="w-5 h-5 mr-2" /> KSHETRAPAL HOSPITAL MULTISPECIALITY & RESEARCH CENTRE</p>
           <iframe
