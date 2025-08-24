@@ -46,7 +46,7 @@ export default function DoctorPortfolio() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <header className="bg-blue-900/90 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-blue-800 text-white px-6 py-4 shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold">Dr. Abhishek Yadav</h1>
           <ul className="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-md font-medium">
