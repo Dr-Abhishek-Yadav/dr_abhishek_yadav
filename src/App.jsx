@@ -46,7 +46,7 @@ export default function DoctorPortfolio() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <header className="bg-blue-800 text-white px-6 py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-blue-900/90 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold">Dr. Abhishek Yadav</h1>
           <ul className="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-md font-medium">
@@ -60,25 +60,28 @@ export default function DoctorPortfolio() {
       </header>
 
       {/* Hero */}
-      <section className="relative text-white py-16 sm:py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg viewBox="0 0 1440 320">
-            <path fill="#ffffff33" fillOpacity="1" d="M0,96L48,106.7C96,117,192,139,288,154.7C384,171,480,181,576,170.7C672,160,768,128,864,128C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
+<section
+  className="relative text-white py-16 sm:py-24 px-4 overflow-hidden"
+  style={{
+    backgroundImage: `url('${import.meta.env.BASE_URL}gastro-bg.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div> {/* Overlay for readability */}
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          <img
-            src={`${import.meta.env.BASE_URL}dr-abhishek-yadav-gastroenterologist-ajmer.jpg`}
-            alt="Dr. Abhishek Yadav"
-            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-4"
-          />
-          <h2 className="text-2xl sm:text-4xl font-bold text-white">Dr. Abhishek Yadav</h2>
-          <p className="text-sm sm:text-lg text-gray-200 mt-1">MBBS, MD, DM – Gastroenterology</p>
-          <p className="text-sm sm:text-base text-gray-100 mt-1">Gastrointestinal and Liver Specialist</p>
-          <p className="text-sm sm:text-base text-gray-100">Diagnostic and therapeutic Endoscopist</p>
-        </div>
-      </section>
+  <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+    <img
+      src={`${import.meta.env.BASE_URL}dr-abhishek-yadav-gastroenterologist-ajmer.jpg`}
+      alt="Dr. Abhishek Yadav"
+      className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-lg mb-4"
+    />
+    <h2 className="text-2xl sm:text-4xl font-bold text-white">Dr. Abhishek Yadav</h2>
+    <p className="text-sm sm:text-lg text-gray-200 mt-1">MBBS, MD, DM – Gastroenterology</p>
+    <p className="text-sm sm:text-base text-gray-100 mt-1">Gastrointestinal and Liver Specialist</p>
+    <p className="text-sm sm:text-base text-gray-100">Diagnostic and Therapeutic Endoscopist</p>
+  </div>
+</section>
 
       {/* About */}
       <section id="about" className="p-6 max-w-4xl mx-auto">
