@@ -45,58 +45,21 @@ export default function DoctorPortfolio() {
     }
   };
 
-  // inside DoctorPortfolio component
-const handleNavClick = (e, targetId) => {
-  e.preventDefault();
-  const section = document.querySelector(targetId);
-  const header = document.querySelector("header"); // your sticky header
-  if (section) {
-    const yOffset = -(header?.offsetHeight || 80); // dynamically get height
-    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  }
-  setTimeout(() => setMenuOpen(false), 300);
-};
-
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <header className="bg-blue-800/95 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-blue-800 text-white px-6 py-4 shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold">Dr. Abhishek Yadav</h1>
 
           {/* Desktop Menu */}
           <ul className="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-md font-medium">
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#about")} className="hover:text-blue-200">
-                About
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#services")} className="hover:text-blue-200">
-                Services
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#experience")} className="hover:text-blue-200">
-                Experience
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#education")} className="hover:text-blue-200">
-                Education
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#opd")} className="hover:text-blue-200">
-                OPD
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#contact")} className="hover:text-blue-200">
-                Contact
-              </button>
-            </li>
+            <li><a href="#about" className="hover:text-blue-200">About</a></li>
+            <li><a href="#services" className="hover:text-blue-200">Services</a></li>
+            <li><a href="#experience" className="hover:text-blue-200">Experience</a></li>
+            <li><a href="#education" className="hover:text-blue-200">Education</a></li>
+            <li><a href="#opd" className="hover:text-blue-200">OPD</a></li>
+            <li><a href="#contact" className="hover:text-blue-200">Contact</a></li>
           </ul>
 
           {/* Hamburger Button (Mobile) */}
@@ -108,25 +71,25 @@ const handleNavClick = (e, targetId) => {
           </button>
         </nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.ul
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
-          >
-            <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="hover:text-blue-200">About</a></li>
-            <li><a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="hover:text-blue-200">Services</a></li>
-            <li><a href="#experience" onClick={(e) => handleNavClick(e, "#experience")} className="hover:text-blue-200">Experience</a></li>
-            <li><a href="#education" onClick={(e) => handleNavClick(e, "#education")} className="hover:text-blue-200">Education</a></li>
-            <li><a href="#opd" onClick={(e) => handleNavClick(e, "#opd")} className="hover:text-blue-200">OPD</a></li>
-            <li><a href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="hover:text-blue-200">Contact</a></li>
-          </motion.ul>
-        )}
-      </AnimatePresence>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.ul
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
+            >
+              <li><a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">About</a></li>
+              <li><a href="#services" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Services</a></li>
+              <li><a href="#experience" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Experience</a></li>
+              <li><a href="#education" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Education</a></li>
+              <li><a href="#opd" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">OPD</a></li>
+              <li><a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Contact</a></li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Hero */}
