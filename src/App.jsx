@@ -50,9 +50,10 @@ const handleNavClick = (e, targetId) => {
   e.preventDefault();
   const section = document.querySelector(targetId);
   if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+    const yOffset = -80; // adjust based on header height
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
-  // close hamburger after scroll starts
   setTimeout(() => setMenuOpen(false), 300);
 };
 
@@ -316,7 +317,7 @@ const handleNavClick = (e, targetId) => {
       </section>
 
       <footer className="bg-blue-800 text-white text-center p-4 mt-6">
-        <p>© 2025 Dr. Abhishek Yadav. All rights reservedd.</p>
+        <p>© 2025 Dr. Abhishek Yadav. All rights reserved.</p>
       </footer>
     </div>
   );
