@@ -52,7 +52,8 @@ const handleNavClick = (e, targetId) => {
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
   }
-  setMenuOpen(false); // close menu after navigation
+  // close hamburger after scroll starts
+  setTimeout(() => setMenuOpen(false), 300);
 };
 
   return (
@@ -115,36 +116,12 @@ const handleNavClick = (e, targetId) => {
             transition={{ duration: 0.3 }}
             className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
           >
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#about")} className="hover:text-blue-200">
-                About
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#services")} className="hover:text-blue-200">
-                Services
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#experience")} className="hover:text-blue-200">
-                Experience
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#education")} className="hover:text-blue-200">
-                Education
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#opd")} className="hover:text-blue-200">
-                OPD
-              </button>
-            </li>
-            <li>
-              <button onClick={(e) => handleNavClick(e, "#contact")} className="hover:text-blue-200">
-                Contact
-              </button>
-            </li>
+            <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="hover:text-blue-200">About</a></li>
+            <li><a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="hover:text-blue-200">Services</a></li>
+            <li><a href="#experience" onClick={(e) => handleNavClick(e, "#experience")} className="hover:text-blue-200">Experience</a></li>
+            <li><a href="#education" onClick={(e) => handleNavClick(e, "#education")} className="hover:text-blue-200">Education</a></li>
+            <li><a href="#opd" onClick={(e) => handleNavClick(e, "#opd")} className="hover:text-blue-200">OPD</a></li>
+            <li><a href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="hover:text-blue-200">Contact</a></li>
           </motion.ul>
         )}
       </AnimatePresence>
@@ -339,7 +316,7 @@ const handleNavClick = (e, targetId) => {
       </section>
 
       <footer className="bg-blue-800 text-white text-center p-4 mt-6">
-        <p>© 2025 Dr. Abhishek Yadav. All rights reserved.</p>
+        <p>© 2025 Dr. Abhishek Yadav. All rights reservedd.</p>
       </footer>
     </div>
   );
