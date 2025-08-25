@@ -1,6 +1,7 @@
 // src/App.jsx
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function DoctorPortfolio() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ export default function DoctorPortfolio() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -46,9 +48,11 @@ export default function DoctorPortfolio() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <header className="bg-blue-900/90 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-blue-800/95 backdrop-blur-md text-white px-6 py-4 shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold">Dr. Abhishek Yadav</h1>
+
+          {/* Desktop Menu */}
           <ul className="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-md font-medium">
             <li><a href="#about" className="hover:text-blue-200">About</a></li>
             <li><a href="#services" className="hover:text-blue-200">Services</a></li>
@@ -57,7 +61,35 @@ export default function DoctorPortfolio() {
             <li><a href="#opd" className="hover:text-blue-200">OPD</a></li>
             <li><a href="#contact" className="hover:text-blue-200">Contact</a></li>
           </ul>
+
+          {/* Hamburger Button (Mobile) */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="sm:hidden focus:outline-none p-2 rounded-md"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.ul
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
+            >
+              <li><a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">About</a></li>
+              <li><a href="#services" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Services</a></li>
+              <li><a href="#experience" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Experience</a></li>
+              <li><a href="#education" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Education</a></li>
+              <li><a href="#opd" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">OPD</a></li>
+              <li><a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Contact</a></li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Hero */}
@@ -69,7 +101,7 @@ export default function DoctorPortfolio() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div> {/* Overlay */}
+        <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
           <img
