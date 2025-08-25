@@ -49,8 +49,9 @@ export default function DoctorPortfolio() {
 const handleNavClick = (e, targetId) => {
   e.preventDefault();
   const section = document.querySelector(targetId);
+  const header = document.querySelector("header"); // your sticky header
   if (section) {
-    const yOffset = -80; // adjust based on header height
+    const yOffset = -(header?.offsetHeight || 80); // dynamically get height
     const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
