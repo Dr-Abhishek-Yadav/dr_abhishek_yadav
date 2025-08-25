@@ -45,6 +45,16 @@ export default function DoctorPortfolio() {
     }
   };
 
+  // inside DoctorPortfolio component
+const handleNavClick = (e, targetId) => {
+  e.preventDefault();
+  const section = document.querySelector(targetId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+  setMenuOpen(false); // close menu after navigation
+};
+
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
       {/* Navbar */}
@@ -82,22 +92,22 @@ export default function DoctorPortfolio() {
             className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
           >
             <li>
-              <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">About</a>
+              <a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="hover:text-blue-200">About</a>
             </li>
             <li>
-              <a href="#services" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Services</a>
+              <a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="hover:text-blue-200">Services</a>
             </li>
             <li>
-              <a href="#experience" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Experience</a>
+              <a href="#experience" onClick={(e) => handleNavClick(e, "#experience")} className="hover:text-blue-200">Experience</a>
             </li>
             <li>
-              <a href="#education" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Education</a>
+              <a href="#education" onClick={(e) => handleNavClick(e, "#education")} className="hover:text-blue-200">Education</a>
             </li>
             <li>
-              <a href="#opd" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">OPD</a>
+              <a href="#opd" onClick={(e) => handleNavClick(e, "#opd")} className="hover:text-blue-200">OPD</a>
             </li>
             <li>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Contact</a>
+              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")} className="hover:text-blue-200">Contact</a>
             </li>
           </motion.ul>
         )}
