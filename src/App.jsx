@@ -1,7 +1,6 @@
 // src/App.jsx
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Linkedin, Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function DoctorPortfolio() {
   const [formData, setFormData] = useState({
@@ -72,41 +71,16 @@ export default function DoctorPortfolio() {
         </nav>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {menuOpen && (
-            <motion.ul
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md"
-            >
-              {[
-                { id: "about", label: "About" },
-                { id: "services", label: "Services" },
-                { id: "experience", label: "Experience" },
-                { id: "education", label: "Education" },
-                { id: "opd", label: "OPD" },
-                { id: "contact", label: "Contact" },
-              ].map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => {
-                      const section = document.getElementById(item.id);
-                      if (section) {
-                        section.scrollIntoView({ behavior: "smooth" });
-                      }
-                      setMenuOpen(false);
-                    }}
-                    className="w-full text-white hover:text-blue-200"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </motion.ul>
-          )}
-        </AnimatePresence>
+        {menuOpen && (
+          <ul className="sm:hidden flex flex-col space-y-4 mt-4 bg-blue-800 rounded-lg p-4 text-center text-md font-medium shadow-md">
+            <li><a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">About</a></li>
+            <li><a href="#services" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Services</a></li>
+            <li><a href="#experience" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Experience</a></li>
+            <li><a href="#education" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Education</a></li>
+            <li><a href="#opd" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">OPD</a></li>
+            <li><a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-blue-200">Contact</a></li>
+          </ul>
+        )}
       </header>
 
       {/* Hero */}
