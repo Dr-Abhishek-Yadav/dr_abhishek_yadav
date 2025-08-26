@@ -188,11 +188,20 @@ export default function DoctorPortfolio() {
       {/* OPD Timings */}
       <section id="opd" className="bg-blue-50 p-6 max-w-4xl mx-auto rounded-lg shadow-md mt-6">
         <h2 className="text-3xl font-semibold mb-4 text-blue-900">OPD Timings</h2>
-        <p className="text-gray-800 font-medium">Dr. Abhishek Yadav – Ajmer Gastro & Liver Care</p>
-        <p className="text-gray-700 mt-2">⏰ OPD Hours: <span className="font-semibold">6:00 PM – 8:00 PM (Mon–Sun)</span></p>
-        <p className="text-gray-700 mt-2">📞 Book Appointment at Call / WhatsApp: <span className="font-semibold">+91-8279263547</span></p>
+        <p className="text-gray-800 font-medium">Dr. Abhishek Yadav</p>
+        <p className="text-gray-700 mt-2">
+          ⏰ OPD Hours: <span className="font-semibold">6:00 PM – 8:00 PM (Mon–Sun)</span>
+        </p>
+        <p className="text-gray-700 mt-2">
+          📍 Address: <span className="font-semibold">Plot No.7, Street No.3, New Ambabari, Topdara, Ajmer, Rajasthan 305001</span>
+        </p>
+        <p className="text-gray-700 mt-2">
+          📞 Book Appointment at Call / WhatsApp: <span className="font-semibold">+91-8279263547</span>
+        </p>
         <p className="text-gray-700 mt-2">🚑 For urgent or emergency services, please contact:</p>
-        <p className="text-gray-900 font-semibold">Kshetrapal Hospital Multispeciality & Research Centre (24×7)</p>
+        <p className="text-gray-900 font-semibold">
+          Kshetrapal Hospital Multispeciality & Research Centre (24×7)
+        </p>
       </section>
       
       {/* Contact */}
