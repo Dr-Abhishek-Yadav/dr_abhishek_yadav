@@ -198,7 +198,7 @@ export default function DoctorPortfolio() {
           <div className="grid grid-cols-2 gap-4 mt-2">
             <div className="flex items-center">
               <span className="font-semibold text-gray-800">Monday – Saturday:</span>
-              <span className="ml-2 text-gray-700">6:00 PM – 8:00 PM</span>
+              <span className="ml-2 text-gray-700">6:00 PM – 8:30 PM</span>
             </div>
             <div className="flex items-center">
               <span className="font-semibold text-gray-800">Sunday:</span>
