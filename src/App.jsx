@@ -188,97 +188,148 @@ export default function DoctorPortfolio() {
       {/* OPD Timings */}
       <section id="opd" className="bg-blue-50 p-6 max-w-4xl mx-auto rounded-lg shadow-md mt-6">
         <h2 className="text-3xl font-semibold mb-4 text-blue-900">OPD Timings</h2>
+
+        {/* Doctor's Name */}
         <p className="text-gray-800 font-medium">Dr. Abhishek Yadav</p>
-        <p className="text-gray-700 mt-2">
-          ⏰ OPD Hours: <span className="font-semibold">6:00 PM – 8:00 PM (Mon–Sun)</span>
+
+        {/* OPD Hours */}
+        <div className="text-gray-700 mt-4">
+          <p className="font-semibold">⏰ OPD Hours:</p>
+          <div className="grid grid-cols-2 gap-4 mt-2">
+            <div className="flex items-center">
+              <span className="font-semibold text-gray-800">Monday – Saturday:</span>
+              <span className="ml-2 text-gray-700">6:00 PM – 8:00 PM</span>
+            </div>
+            <div className="flex items-center">
+              <span className="font-semibold text-gray-800">Sunday:</span>
+              <span className="ml-2 text-gray-700">10:00 AM – 12:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Address */}
+        <p className="text-gray-700 mt-4">
+          📍 <span className="font-semibold">Address:</span> B-134, opposite Hotel Panchsheel Plaza, B Block, Panchsheel Nagar, Ajmer, Rajasthan 305004
         </p>
-        <p className="text-gray-700 mt-2">
-          📍 Address: <span className="font-semibold">Plot No.7, Street No.3, New Ambabari, Topdara, Ajmer, Rajasthan 305001</span>
+
+        {/* Appointment Booking */}
+        <p className="text-gray-700 mt-4">
+          📞 <span className="font-semibold">Book Appointment at Call / WhatsApp:</span> +91-8279263547
         </p>
-        <p className="text-gray-700 mt-2">
-          📞 Book Appointment at Call / WhatsApp: <span className="font-semibold">+91-8279263547</span>
+
+        {/* Emergency Contact */}
+        <p className="text-gray-700 mt-4">
+          🚑 <span className="font-semibold">For urgent or emergency services, please contact:</span>
         </p>
-        <p className="text-gray-700 mt-2">🚑 For urgent or emergency services, please contact:</p>
+        
         <p className="text-gray-900 font-semibold">
           Kshetrapal Hospital Multispeciality & Research Centre (24×7)
         </p>
       </section>
+
       
-      {/* Contact */}
-      <section id="contact" className="p-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
+{/* Contact */}
+<section id="contact" className="p-6 max-w-4xl mx-auto">
+  <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
 
-        {submitted ? (
-          <p className="text-green-600 font-medium text-lg">✅ Thank you! Your message has been sent.</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              required
-              className="w-full border p-2 rounded"
-            />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-              className="w-full border p-2 rounded"
-            />
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Your Phone Number"
-              required
-              className="w-full border p-2 rounded"
-              pattern="[0-9]{10}"
-              maxLength="10"
-              title="Please enter a 10-digit phone number"
-            />
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-              className="w-full border p-2 rounded"
-            />
-            <input type="hidden" name="_subject" value="New Inquiry from My Doctor Website" />
-            <input type="hidden" name="_captcha" value="false" />
-            <button type="submit" className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition">
-              Send Message
-            </button>
-          </form>
-        )}
+  {submitted ? (
+    <p className="text-green-600 font-medium text-lg">✅ Thank you! Your message has been sent.</p>
+  ) : (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Your Name"
+        required
+        className="w-full border p-2 rounded"
+      />
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="Your Email"
+        required
+        className="w-full border p-2 rounded"
+      />
+      <input
+        type="tel"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        placeholder="Your Phone Number"
+        required
+        className="w-full border p-2 rounded"
+        pattern="[0-9]{10}"
+        maxLength="10"
+        title="Please enter a 10-digit phone number"
+      />
+      <textarea
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        placeholder="Your Message"
+        required
+        className="w-full border p-2 rounded"
+      />
+      <input type="hidden" name="_subject" value="New Inquiry from My Doctor Website" />
+      <input type="hidden" name="_captcha" value="false" />
+      <button type="submit" className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition">
+        Send Message
+      </button>
+    </form>
+  )}
 
-        {error && (
-          <p className="text-red-600 mt-4">❌ Something went wrong. Please try again later.</p>
-        )}
+  {error && (
+    <p className="text-red-600 mt-4">❌ Something went wrong. Please try again later.</p>
+  )}
 
-        <div className="mt-6 space-y-2 text-gray-800">
-          <p className="flex items-center"><Mail className="w-5 h-5 mr-2" /> drabhishekyadavgastro@gmail.com</p>
-          <p className="flex items-center"><Phone className="w-5 h-5 mr-2" /> +91-8279263547</p>
-          <p className="flex items-center"><Linkedin className="w-5 h-5 mr-2" /> <a href="https://www.linkedin.com/in/abhishek-yadav-9a6a1273/" target="_blank" className="text-blue-700 underline">LinkedIn</a></p>
-          <p className="flex items-center"><MapPin className="w-5 h-5 mr-2" /> KSHETRAPAL HOSPITAL MULTISPECIALITY & RESEARCH CENTRE</p>
-          <iframe
-            title="Clinic Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1847581309266!2d74.63233171452208!3d26.504432083305273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be7cc30274d49%3A0x9d73720eeddb71b0!2sKSHETRAPAL%20HOSPITAL%20MULTISPECIALITY%20%26%20RESEARCH%20CENTRE!5e0!3m2!1sen!2sin!4v1689864807087!5m2!1sen!2sin"
-            width="100%"
-            height="300"
-            className="border rounded shadow-md"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
+  <div className="mt-6 space-y-2 text-gray-800">
+    <p className="flex items-center"><Mail className="w-5 h-5 mr-2" /> drabhishekyadavgastro@gmail.com</p>
+    <p className="flex items-center"><Phone className="w-5 h-5 mr-2" /> +91-8279263547</p>
+    <p className="flex items-center"><Linkedin className="w-5 h-5 mr-2" /> 
+      <a href="https://www.linkedin.com/in/abhishek-yadav-9a6a1273/" target="_blank" className="text-blue-700 underline">LinkedIn</a>
+    </p>
+    
+    {/* Location Section */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      {/* Kshetrapal Hospital Location */}
+      <div className="flex items-center">
+        <MapPin className="w-5 h-5 mr-2" />
+        <span className="font-semibold">Kshetrapal Hospital Multispeciality & Research Centre</span>
+      </div>
+      <iframe
+        title="Kshetrapal Hospital Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1847581309266!2d74.63233171452208!3d26.504432083305273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be7cc30274d49%3A0x9d73720eeddb71b0!2sKSHETRAPAL%20HOSPITAL%20MULTISPECIALITY%20%26%20RESEARCH%20CENTRE!5e0!3m2!1sen!2sin!4v1689864807087!5m2!1sen!2sin"
+        width="100%"
+        height="200"
+        className="border rounded shadow-md"
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+      
+      {/* Home OPD Location */}
+      <div className="flex items-center">
+        <MapPin className="w-5 h-5 mr-2" />
+        <span className="font-semibold">Home OPD Location</span>
+      </div>
+      <iframe
+        title="Home OPD Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.3330336158087!2d74.6316169!3d26.5094116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be78e66fea35b%3A0xb4e239d460737e48!2sDr%20Abhishek%20Yadav%20-%20Gastroenterologist%2C%20Liver%20Specialist%2C%20Therapeutic%20Endoscopist!5e0!3m2!1sen!2sin!4v1756894436870!5m2!1sen!2sin"
+        width="100%"
+        height="200"
+        className="border rounded shadow-md"
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
 
       <footer className="bg-blue-800 text-white text-center p-4 mt-6">
         <p>© 2025 Dr. Abhishek Yadav. All rights reserved.</p>
