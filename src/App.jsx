@@ -181,7 +181,7 @@ export default function DoctorPortfolio() {
           <li>Faculty presenter – GI Clinics, ISCGCON Bengaluru 2024</li>
           <li>Gold Medal – RAJAPICON Jaisalmer 2019 (API Rajasthan)</li>
           <li>Gold Medal – Physiology, MBBS</li>
-          <li>Gold Medal – First MBBS</li>
+          <li>Gold Medal – MBBS</li>
         </ul>
       </section>
 
@@ -199,7 +199,7 @@ export default function DoctorPortfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Home OPD */}
             <div className="bg-white rounded-md p-4 shadow-sm">
-              <p className="font-semibold text-blue-800 mb-2">🏠 Home OPD</p>
+              <p className="font-semibold text-blue-800 mb-2">🏠 OPD Clinic</p>
               <p><span className="font-semibold text-gray-800">Monday – Saturday:</span> 6:00 PM – 8:30 PM</p>
               <p><span className="font-semibold text-gray-800">Sunday:</span> 10:00 AM – 12:00 PM</p>
             </div>
@@ -320,10 +320,10 @@ export default function DoctorPortfolio() {
       {/* Home OPD Location */}
       <div className="flex items-center">
         <MapPin className="w-5 h-5 mr-2" />
-        <span className="font-semibold">Home OPD Location</span>
+        <span className="font-semibold">OPD Clinic Location</span>
       </div>
       <iframe
-        title="Home OPD Location"
+        title="OPD Clinic Location"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.3330336158087!2d74.6316169!3d26.5094116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be78e66fea35b%3A0xb4e239d460737e48!2sDr%20Abhishek%20Yadav%20-%20Gastroenterologist%2C%20Liver%20Specialist%2C%20Therapeutic%20Endoscopist!5e0!3m2!1sen!2sin!4v1756894436870!5m2!1sen!2sin"
         width="100%"
         height="200"
