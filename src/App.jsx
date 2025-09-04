@@ -194,21 +194,27 @@ export default function DoctorPortfolio() {
 
         {/* OPD Hours */}
         <div className="text-gray-700 mt-4">
-          <p className="font-semibold">⏰ OPD Hours:</p>
-          <div className="grid grid-cols-2 gap-4 mt-2">
-            <div className="flex items-center">
-              <span className="font-semibold text-gray-800">Monday – Saturday:</span>
-              <span className="ml-2 text-gray-700">6:00 PM – 8:30 PM</span>
+          <p className="font-semibold mb-2">⏰ OPD Hours:</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Home OPD */}
+            <div className="bg-white rounded-md p-4 shadow-sm">
+              <p className="font-semibold text-blue-800 mb-2">🏠 Home OPD</p>
+              <p><span className="font-semibold text-gray-800">Monday – Saturday:</span> 6:00 PM – 8:30 PM</p>
+              <p><span className="font-semibold text-gray-800">Sunday:</span> 10:00 AM – 12:00 PM</p>
             </div>
-            <div className="flex items-center">
-              <span className="font-semibold text-gray-800">Sunday:</span>
-              <span className="ml-2 text-gray-700">10:00 AM – 12:00 PM</span>
+
+            {/* Kshetrapal Hospital OPD */}
+            <div className="bg-white rounded-md p-4 shadow-sm">
+              <p className="font-semibold text-blue-800 mb-2">🏥 Kshetrapal Hospital</p>
+              <p><span className="font-semibold text-gray-800">Monday – Saturday:</span> 10:00 AM – 5:00 PM</p>
+              <p className="text-sm text-gray-500 mt-1">(*Closed on Sundays)</p>
             </div>
           </div>
         </div>
 
         {/* Address */}
-        <p className="text-gray-700 mt-4">
+        <p className="text-gray-700 mt-6">
           📍 <span className="font-semibold">Address:</span> B-134, opposite Hotel Panchsheel Plaza, B Block, Panchsheel Nagar, Ajmer, Rajasthan 305004
         </p>
 
@@ -221,7 +227,7 @@ export default function DoctorPortfolio() {
         <p className="text-gray-700 mt-4">
           🚑 <span className="font-semibold">For urgent or emergency services, please contact:</span>
         </p>
-        
+
         <p className="text-gray-900 font-semibold">
           Kshetrapal Hospital Multispeciality & Research Centre (24×7)
         </p>
