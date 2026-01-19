@@ -336,9 +336,8 @@ export default function DoctorPortfolio() {
   </div>
 </section>
 
-
       <footer className="bg-blue-800 text-white text-center p-4 mt-6">
-        <p>© 2025 Dr. Abhishek Yadav. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Dr. Abhishek Yadav. All rights reserved.</p>
       </footer>
     </div>
   );
