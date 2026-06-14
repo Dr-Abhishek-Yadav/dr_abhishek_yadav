@@ -201,7 +201,7 @@ export default function DoctorPortfolio() {
             <div className="bg-white rounded-md p-4 shadow-sm">
               <p className="font-semibold text-blue-800 mb-2">🏠 OPD Clinic</p>
               <p><span className="font-semibold text-gray-800">Monday – Saturday:</span> 6:00 PM – 8:30 PM</p>
-              <p><span className="font-semibold text-gray-800">Sunday:</span> 10:00 AM – 12:00 PM</p>
+              <p><span className="font-semibold text-gray-800">Sunday:</span> Call for Appointments</p>
             </div>
 
             {/* Kshetrapal Hospital OPD */}
