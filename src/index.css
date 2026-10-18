@@ -171,3 +171,89 @@
     transition: none;
   }
 }
+
+
+/* Fix floating cards overlapping the doctor photo on mobile */
+@media (max-width: 640px) {
+  .hero-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0 12px 8px;
+    box-sizing: border-box;
+  }
+
+  /* Keep the doctor photo and name caption clear */
+  .doctor-photo-frame {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 4px;
+    box-sizing: border-box;
+  }
+
+  .doctor-photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .photo-caption {
+    z-index: 2;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Put both cards below the photo instead of over it */
+  .floating-card,
+  .floating-card-top,
+  .floating-card-bottom {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  .floating-card > span:last-child {
+    min-width: 0;
+  }
+
+  .floating-card strong,
+  .floating-card small {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .floating-card small {
+    line-height: 1.4;
+  }
+
+  /* Prevent the decorative label from covering the cards */
+  .visual-label {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    align-self: flex-start;
+    margin-top: 2px;
+    z-index: 1;
+  }
+}
